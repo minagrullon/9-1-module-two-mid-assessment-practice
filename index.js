@@ -258,7 +258,15 @@ return inAFilm
  *  @returns {Array[]}} - returns an array of arrays.
  */
 
-function homeWorldValues() {}
+function homeWorldValues(characters) {
+let arr = []
+const returnValues = characters.filter((char) => {
+  if(char.eye_color){
+    return Object.values(char)
+  }
+})
+return returnValues
+}
 
 //UNCOMMENT THE LINE BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 // console.log(homeWorldValues(characters));
